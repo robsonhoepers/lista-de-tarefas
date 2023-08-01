@@ -1,0 +1,163 @@
+<section class="container criar-tarefas ff-inter">
+  <header class="header">
+    <h2>Adicione uma <br> nova tarefa:</h2>
+  </header>
+  <form>
+    <label for="tarefa">Serviço a ser executado</label>
+    <input
+    type="textarea"
+    class="input"
+    id="tarefa"
+    name="tarefa"
+    placeholder="Digite a tarefa"
+    [(ngModel)]="tarefa.conteudo"
+    >
+    <label for="descrição">Descrição do serviço executado </label>
+    <input
+    type="text"
+    class="input"
+    id="descricao"
+    name="descricao"
+    placeholder="Descreva o serviço"
+    [(ngModel)]="tarefa.descricao"
+    >
+
+    <label for="setor">Setor</label>
+    <input
+    type="text"
+    class="input"
+    id="setor"
+    name="setor"
+    placeholder="Informe o setor"
+    [(ngModel)]="tarefa.setor"
+    >
+
+    <label for="equipamento">Equipamento</label>
+    <input
+    type="text"
+    class="input"
+    id="equipamento"
+    name="equipamento"
+    placeholder="Informe o equipamento"
+    [(ngModel)]="tarefa.equipamento"
+    >
+
+    <label for="solicitante">Solicitante</label>
+    <input
+    type="text"
+    class="input"
+    id="solicitante"
+    name="solicitante"
+    placeholder="Informe o solicitante"
+    [(ngModel)]="tarefa.solicitante"
+    >
+
+  <div class="d-flex">
+    <div>
+      <label for="data">Data</label>
+      <input
+      type="date"
+      class="inputData"
+      id="data"
+      name="data"
+      [(ngModel)]="tarefa.data"
+      >
+    </div>
+    <div>
+      <label for="horaInicio">Hora inicio</label>
+      <input
+      type="time"
+      class="inputData"
+      id="horaInicio"
+      name="horaInicio"
+      [(ngModel)]="tarefa.horaInicio"
+      >
+    </div>
+    <div>
+      <label for="horaFim">Hora Fim</label>
+      <input
+      type="time"
+      class="inputData"
+      id="horaFim"
+      name="horaFim"
+      [(ngModel)]="tarefa.horaFim"
+      >
+    </div>
+  </div>
+
+
+
+    <!--Radio Buttons-->
+    <label for="estado">Selecione o estado da tarefa:</label>
+    <div class="container-radio">
+      <!--Radio button modelo 1-->
+      <div class="radio-modelo">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="modelo-card"
+            [(ngModel)]="tarefa.modelo"
+            >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+            <span>Em andamento</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo1 ff-roboto-mono">
+          <!--<img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">-->
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+        </div>
+      </div>
+      <!--Radio button modelo 2-->
+      <div class="radio-modelo">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="modelo-card"
+            [(ngModel)]="tarefa.modelo"
+            >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+            <span>Aguardando Material</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo2 ff-roboto-mono">
+         <!-- <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis">-->
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+        </div>
+      </div>
+      <!--Radio button modelo 3-->
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input
+            type="radio"
+            id="modelo3"
+            value="modelo3"
+            name="modelo-card"
+            [(ngModel)]="tarefa.modelo"
+            >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+            <span>Concluído</span>
+        </label>
+        Prévia:
+        <div class="modelo modelo3 ff-roboto-mono">
+         <!-- <img src="../../../../assets/imagens/modelo3.png" alt="Aspas azuis">-->
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="acoes">
+      <button (click)="criarTarefa()" class="botao">Salvar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>

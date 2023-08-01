@@ -1,0 +1,20 @@
+<div class="tarefa {{ tarefa.modelo }} ff-roboto-mono " [ngClass]="larguraTarefas()">
+  <!-- <img src="/assets/imagens/{{ tarefa.modelo }}.png" alt="Aspas coloridas">-->
+   <p class="conteudo">{{ tarefa.conteudo }}</p>
+   <p class="autoria">{{ tarefa.descricao }}</p>
+   <p class="autoria">{{ tarefa.setor}}</p>
+   <p class="autoria">{{ tarefa.descricao }}</p>
+   <p class="autoria">{{ tarefa.equipamento }}</p>
+   <p class="autoria">{{ tarefa.solicitante }}</p>
+   <p class="autoria">{{ tarefa.data }}</p>
+   <p class="autoria">{{ tarefa.horaInicio }}</p>
+   <p class="autoria">{{ tarefa.horaFim }}</p>
+   <div class="acoes">
+     <button class="botao-editar" routerLink="/tarefas/editarTarefa/{{tarefa.id}}" alt="Ícone de editar">
+         <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar">
+     </button>
+     <button class="botao-excluir" routerLink="/tarefas/excluirTarefa/{{tarefa.id}}">
+         <img src="/assets/imagens/icone-excluir.png" alt="Ícone de excluir">
+     </button>
+ </div>
+ </div>
